@@ -1,0 +1,17 @@
+@(title: String)(sidebar: Html)(content: Html)
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>@title</title>
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+  </head>
+  <body>
+  	@sidebar
+  	@content
+    @playscalajs.html.scripts("client")
+  </body>
+</html>
